@@ -36,5 +36,19 @@ task :maverick64 do
   `bundle exec vagrant basebox export ubuntu-10.10-server-amd64`
 end
 
+desc "Ubuntu 11.04 32 Vagrant Basebox"
+task :natty32 do
+  `bundle exec vagrant basebox build ubuntu-11.04-server-i386`
+  `bundle exec vagrant basebox export ubuntu-11.04-server-i386`
+end
+
+desc "Ubuntu 11.04 64 Vagrant Basebox"
+task :natty64 do
+  `bundle exec vagrant basebox build ubuntu-11.04-server-amd64`
+  `bundle exec vagrant basebox export ubuntu-11.04-server-amd64`
+end
+
 desc "Ubuntu Vagrant Baseboxes (all)"
-task :vagrants => [ :lucid32, :lucid64, :maverick32, :maverick64 ]
+task :vagrants => [ :lucid32, :lucid64,
+                    :maverick32, :maverick64,
+                    :natty32, :natty64 ]

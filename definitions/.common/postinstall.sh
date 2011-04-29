@@ -25,15 +25,6 @@ sh /mnt/VBoxLinuxAdditions.run
 umount /mnt
 rm VBoxGuestAdditions_$VBOX_VERSION.iso
 
-# Chef
-echo "deb http://apt.opscode.com/ `lsb_release -cs` main" \
-    > /etc/apt/sources.list.d/opscode.list
-wget -q -O- http://apt.opscode.com/packages@opscode.com.gpg.key \
-    | apt-key add -
-apt-get update
-export DEBIAN_FRONTEND=noninteractive
-apt-get -y install chef
-
 # Clean
 apt-get -y autoremove
 apt-get -y clean

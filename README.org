@@ -3,12 +3,12 @@
 #+DATE:2011-03-26
 
 * About
-  Image creation for Ubuntu on Vagrant
+  Vagrant boxes for developers creation
 
 * Requirements
   - [[http://www.virtualbox.org/wiki/Downloads][VirtualBox]] 4
   - [[http://rvm.beginrescueend.com/][RVM]]
-  - Ubuntu Server install ISOs (in the iso dir)
+  - Ubuntu Server and/or CentOS install ISOs (in the iso dir)
     (or else they'll be fetched for you)
 
 * Setup
